@@ -12,14 +12,16 @@ First, in the project directory start up a REPL
 ```
 lein repl
 ```
-and then
+and then start up Weasel using [simple-brepl](https://github.com/james-henderson/simple-brepl):
 ```
 user=> (simple-brepl)
 
 ExceptionInfo No such namespace: bar.baz at line 1 /Users/mfikes/Documents/Projects/weasel-src-paths/src/weasel_src_paths/core.cljs  clojure.core/ex-info (core.clj:4403)
 ```
 
-This prevents Weasel from starting up. Previously, with earlier versions of ClojureScript, this simply resulted in analysis warnings. To see this, revise `project.clj` to instead refer to `[org.clojure/clojurescript "0.0-2371"]`, `[weasel "0.4.2"]`, and `[jarohen/simple-brepl "0.1.2"]`.
+This prevents Weasel from starting up.
+
+Previously, with earlier versions of ClojureScript, this simply resulted in analysis warnings. To see this, revise `project.clj` to instead refer to `[org.clojure/clojurescript "0.0-2371"]`, `[weasel "0.4.2"]`, and `[jarohen/simple-brepl "0.1.2"]`.
 
 ```
 user=> (simple-brepl)
