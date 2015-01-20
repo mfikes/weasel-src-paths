@@ -8,7 +8,7 @@
                  [weasel "0.5.0"]]
   :plugins [[lein-cljsbuild "1.0.3"]
             [jarohen/simple-brepl "0.2.1"]]
-  :source-paths ["src"]
+  :source-paths ["src" "foo-src"]
   :cljsbuild {:builds {:dev
                        {:source-paths ["src"
                                        "foo-src"]}}})
