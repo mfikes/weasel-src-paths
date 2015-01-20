@@ -4,6 +4,10 @@ This is a small repository making it easy to reproduce a [problem](https://githu
 
 ## Usage
 
+Observe that `lein cljsbuild once dev` builds the project without issue.
+
+This project has a `bar.baz` namespace defined in `src-foo`. The `weasel-src-paths.core` namespace refers to a `hello` function in the `bar.baz` namespace.
+
 First, in the project directory start up a REPL
 ```
 lein repl
