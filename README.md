@@ -2,9 +2,11 @@
 
 This is a small repository making it easy to reproduce a [problem](https://github.com/tomjakubowski/weasel/issues/28) with Weasel in the case of multiple source path roots.
 
-*UPDATE*: Adding the additional source root to the project-level `:source-paths` appears to address the issue. This revision has been committed to this repo, showing the fix.
+*UPDATE*: Adding the additional source root to the project-level `:source-paths` appears to address the issue. This revision has been committed to this repo, showing the fix. This could act as a workaround for projects that don't use different sets of `:source-paths` for each cljsbuild build key.
 
 ## Usage
+
+First, remove `"foo-src"` from the project-level, so that you have `:source-paths ["src"]`.
 
 Observe that `lein cljsbuild once dev` builds the project without issue.
 
